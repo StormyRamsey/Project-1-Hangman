@@ -1,37 +1,15 @@
-$(document).ready(function() {
+var wordBank = ['apple', 'orange', 'peanut'];
 
 
-var canvas = document.getElementById('stage');
-var word = document.getElementById('word');
-var letters = document.getElementById('letters');
 
-var wordToGuess ;
-var wordLength;
-var badGuesses;
-var correctGuesses;
+// start button is working; needs to show random number and underscore
+document.getElementById('new-game').onclick = function startGame() {
 
-// initialize game area -------
-function initializeGame() {
-var playGame = document.getElementById(#play).onclick(playGame)
-  /*$('#play').css('display', 'inline-block').click(playGame);
-  $('#clear').css('display', 'inline-block').click(resetGame);
-*/
-
-  function playGame() {
-    alert('Game started');
-  }
-
-  function resetGame() {
-    alert('Game has been reset');
-  }
-}
-//Canvas area ---------
-  var canvas = document.getElementById('myCanvas');
-  var context = canvas.getContext('2d');
-
-      context.font = '40pt Calibri';
-      context.fillStyle = 'blue';
-      context.fillText('Hello World!', 150, 100);
-
-
-});
+        var word = 'abcd123456';
+        var wordLength = word.length;
+        var underscores = '';
+    for(i=0; i<wordLength; i++) {
+        underscores = underscores + '_'
+      }
+document.getElementById('random-words').innerHTML = wordBank[0];
+};
