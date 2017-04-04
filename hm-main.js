@@ -4,7 +4,7 @@ const maxMisses =7;
 //let currentWord = null;
 var wordToGuess = '';
 var wordBank = ['apple', 'oatmeal', 'rice', 'kale', ];
-var word = document.getElementById('blank-word');
+var word = document.getElementById('text');
 //var letters = document.getElementById('start-button');
 var letterInput = document.getElementById('letter');
 /*var el = document.getElementById('submit');
@@ -19,10 +19,12 @@ document.getElementById('new-game').onclick = function startGame() {
         answerArray[i] = '_';
         display = display + '_';
       }
-      document.getElementById('blank-word').innerHTML = display;
+      document.getElementById('text').innerHTML = display;
   //console.log(Object.values(answerArray));
 }
 document.getElementById('submit').onclick = function displayLetter(){
-  console.log('hello');
-  // needs to display transfer value from input to screen
+ document.getElementById('text').innerHTML = document.getElementById('letter').value;
+  //console.log('hello');
+  // needs to display value in #blank-word
+  //connect input value to <div> #bw
 }
