@@ -4,8 +4,12 @@ background-color: #10e7dc;
 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
-
-
+#text{
+  width: 300px;
+  height: 30px;
+  margin: auto;
+  padding: 0;
+}
 
 h1, h2, p{
   color: #0074e1;

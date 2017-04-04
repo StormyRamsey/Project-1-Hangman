@@ -1,30 +1,35 @@
 
-let numOfMisses = 0;
+var numOfMisses = 0;
 const maxMisses =7;
 //let currentWord = null;
-var wordToGuess = '';
-var wordBank = ['apple', 'oatmeal', 'rice', 'kale', ];
+var wordBank = ['apple', 'oatmeal', 'rice', 'kale'];
 var word = document.getElementById('text');
 //var letters = document.getElementById('start-button');
 var letterInput = document.getElementById('letter');
 /*var el = document.getElementById('submit');
 el.innerHTML = wordsBank;*/
-var currentWord = wordBank[ Math.floor(Math.random() * wordBank.length) ];
+var currentWord = null;
+var currentLetters = null
+var lettersGuessed = []
 
-// start button is working; needs to pick random number and display underscore for that word
-document.getElementById('new-game').onclick = function startGame() {
-    var answerArray = [];
-    var display ='';
-      for (var i = 0; i < currentWord.length; i++){
-        answerArray[i] = '_';
-        display = display + '_';
-      }
-      document.getElementById('text').innerHTML = display;
-  //console.log(Object.values(answerArray));
+
+function startGame() {
+  currentWord = wordBank[ Math.floor(Math.random() * wordBank.length) ]
+  currentLetters = currentWord.split('')
+  displayLetters()
 }
-document.getElementById('submit').onclick = function displayLetter(){
- document.getElementById('text').innerHTML = document.getElementById('letter').value;
-  //console.log('hello');
-  // needs to display value in #blank-word
-  //connect input value to <div> #bw
+
+function displayLetters() {
+  let lettersDisplayed = currentLetters.map((letter) => {
+    if(lettersGuessed.includes(letter)) {
+      return letter
+    } else {
+      return ' _ '
+    }
+  })
+  $('#text').text(lettersDisplayed.join(''))
 }
+
+
+
+$('#new-game').on('click', startGame)
