@@ -26,16 +26,16 @@ document.getElementById('new-game').onclick = function startGame() {
       function getWord(word) {
         return currentWord = wordBank[ Math.floor(Math.random() * wordBank.length) ];
 }//----------------------------------------------------
-document.getElementById('submit-letter').onclick = function displayBlankWord(word,letter){
+document.getElementById('submit-letter').onclick = function displayBlankWord(){
  var display ='';
   for(var i=0; i < wordBank.length; i++){
     display = display + '_';
   }
   console.log(letterInput.value);
 }
- /*------------------------------------------------------
-   function guessOne() {
-     var guess = document.getElementById('letterInput');
+ //------------------------------------------------------
+   function guessOne(){
+     var guess = document.getElementById('letter');
      var showThisMessage = '';
 
        if(wordBank.length !== 1){
@@ -44,10 +44,8 @@ document.getElementById('submit-letter').onclick = function displayBlankWord(wor
            var i = 0;
              for (i = 0; i < wordBank.length; i++){
                if (word[i] === guess);
-         }
-
-       }
-
-     }*/
+    }
+  }
+}
 //----------------------------------------------------
 //function usersGuess() {}
