@@ -23,12 +23,13 @@ function displayLetters() {
       return ' _ '
     }
   })
+
   $('#text').text(lettersDisplayed.join(''))
 }
 //-Current Function in progess-
-$('#submit').on('click', function(displayLetters) {
-    $(lettersGuessed).push(displayLetters)
-    $('#letter').text(displayLetters)
+$('#submit').on('click', function() {
+    lettersGuessed.push($('#letter').val())
+    displayLetters()
 
 })
 
