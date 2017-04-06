@@ -4,33 +4,35 @@
     <meta charset="utf-8">
     <title>Hangman Stormy Ramsey</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   </head>
   <body>
-    <h1>HANGMAN</h1>
 
-        <h2>How to Play</h2>
-          <p>Hangman is a word-guessing game. Try to guess the word by picking letters</p>
+        <h1>HANGMAN</h1>
 
+            <h2>How to Play</h2>
+              <p>Hangman is a word-guessing game. Try to guess the word by picking letters</p>
 
-    <div class="game-input">
-        <p>Enter a Letter:
-          <div id="text"></div>
-            <input id="letter" type="text" class="guess" name="letter" maxlength="1" >
-            <input id="submit" type="submit" class="input-button">
-          </p>
+              <p>Enter a Letter:</p>
+
+      <div class="container">
+              <div id="alert-box1" class="alert"></div>
+              <div id="text" class="word"></div>
+          <div class="guess">
+          <input id="letter" type="text" class="guess" name="letter" maxlength="1" >
+          <input id="submit" type="submit" class="input-button">
+        </div>
+      </div>
+
+    <div class="startgame">
+      <button id="new-game"type="button" class="start-button">Start a New Game</button>
     </div>
-  <button id="new-game"type="button" class="start-button">Start a New Game</button>
 
-
-    <p id="word"></p>
-    <div id="letters"></div>
-
-<script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
-<script src="hm-main.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"></script>
+    <script src="hm-main.js"></script>
 
   </body>
 </html>
