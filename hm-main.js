@@ -42,7 +42,7 @@ $('#submit').on('click', function(letter) {
     if (currentWord.includes(input)) {
       $('#alert-box1').text('Good Guess!')
     } else {
-      numMissed += 1
+      //numMissed += 1
       $('#alert-box1').text('Try Again!')
     }
   }

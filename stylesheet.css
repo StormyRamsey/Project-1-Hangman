@@ -1,5 +1,10 @@
 body {
   margin: 0;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: #00a0a6;
+
 }
 
 #text{
@@ -14,44 +19,52 @@ body {
   margin: auto;
   max-width: 500px;
   height: 400px;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
 }
 
 .alert{
-
+font-size: 25px;
+font-family: 'Press Start 2P', cursive;
+color: #e46d14;
+text-shadow: 2px 2px #000;
 }
 
 .word{
+  margin: 50px;
+  color: #000;
 
 }
 
 .guess{
-  display: flex;
-  flex-direction: column;
-  width: 100px;
-  margin: auto;
+  margin: 50px;
+
+}
+
+.input-button{
   align-items: center;
-}
-
-.startgame{
-  display: flex;
+  margin: 50px;
 }
 
 
 
-h1, h2, p{
-  color: #0074e1;
+h1, h2, h3, p{
+  color: #fff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 h1{
 text-align: center;
 font-family: 'Press Start 2P', cursive;
+font-size: 70px;
 }
 
 h2{
   text-align: center;
+}
+
+h3 {
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 25px;
+  text-shadow: 2px 2px #000;
 }
 
 p{
