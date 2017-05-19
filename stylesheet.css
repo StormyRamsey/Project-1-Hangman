@@ -31,21 +31,29 @@ text-shadow: 2px 2px #000;
 .word{
   margin: 50px;
   color: #000;
-
 }
 
 .guess{
-  margin: 50px;
-
+  margin: 20px;
 }
-
+input{
+  height: 25px;
+  width: 80px;
+background-color: #ADFF2F;
+}
 .input-button{
-  align-items: center;
-  margin: 50px;
+  border-radius: 20%;
+  background-color: #ADFF2F;
+  height: 30px;
+  width: 60px;
 }
-
-
-
+button{
+  border-radius: 20%;
+  background-color: #ADFF2F;
+  height: 40px;
+  width: 150px;
+  font-size: 18px;
+}
 h1, h2, h3, p{
   color: #fff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -63,7 +71,7 @@ h2{
 h3 {
   color: #fff;
   font-family: 'Press Start 2P', cursive;
-  font-size: 25px;
+  font-size: 18px;
   text-shadow: 2px 2px #000;
 }
 
