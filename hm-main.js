@@ -5,9 +5,9 @@ var wordBank = ['apple', 'oatmeal', 'rice', 'kale', 'orange', 'banana', 'peach',
 var word = document.getElementById('text');
 var letterInput = $('#letter');
 var currentWord = null;
-var currentLetters = null
+var currentLetters = null;
 var lettersGuessed = []
-
+var remainingLetters = word.length;
 // This function starts the game by pulling a random word from the wordBank array and calling the displayLetters function.
 function startGame() {
   currentWord = wordBank[ Math.floor(Math.random() * wordBank.length) ]
@@ -32,7 +32,8 @@ $('#text').text(lettersDisplayed.join(' '))
 
 $('#submit').on('click', function(letter) {
   let numMissed = 0;
-  if ( numMissed >= maxMisses){
+  let maxMisses = 6;
+  if (numMissed >= maxMisses){
       ('#alert-box1').text('Sorry, You Lose!')
     } else {
     let input = letterInput.val()
@@ -42,8 +43,15 @@ $('#submit').on('click', function(letter) {
     let lettersDisplayed = displayLetters()
     if (currentWord.includes(input)) {
       $('#alert-box1').text('Good Guess!')
-    } else {
+    } else if (!currentWord.includes(input)){
       $('#alert-box1').text('Try Again!')
+    } else {
+      for(var i=0; i < word.length; i++){
+        if(numMissed === maxMisses){
+          $('#alert-box1').text('Game Over')
+          break;
+          }
+        }
       }
     }
   })
