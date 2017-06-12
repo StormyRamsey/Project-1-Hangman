@@ -4,7 +4,7 @@ Objective: In this game the main objective is for the user to guess the word by 
 
 Technology used: HTML, CSS, Javascript & jQuery.
 
-Installation instruction: Fork Repo and Clone it to your choosen dicectory.
+Installation instruction: Fork Repo and Clone it to your choosen directory.
 
 Stormy Ramsey 4/3/2017			
 
